@@ -6,7 +6,6 @@ const cors = require('cors');
 const twilio = require('twilio');
 
 const app = express();
-const port = 3001;
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID; // Twilio Account SID
 const authToken = process.env.TWILIO_AUTH_TOKEN; // Twilio Auth Token
@@ -35,6 +34,5 @@ app.post('/send-message', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
+// אין צורך להגדיר פורט בעצמך כאשר מריצים על Vercel
+app.listen();
