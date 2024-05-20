@@ -1,0 +1,97 @@
+.homePage {
+    background: linear-gradient(to bottom right, black, #98c2da, transparent);
+}
+
+@font-face {
+    font-family: 'AshuriteFont';
+    src: url('../assets/ashurit.woff2') format('woff2'), 
+         url('../assets/ashurit.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manuscript';
+    src: 
+    url('../assets/manuscript.woff2') format('woff2'),
+         url('../assets/manuscript.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* .homePage h1 {
+    color: white;
+    text-align: right;
+    margin-right: 20%;
+    font-family: 'AshuriteFont', sans-serif;
+    font-size: 50px;
+} */
+/* .homePage h4 {
+    color: white;
+    text-align: right;
+    margin-right: 20%;
+    margin-left: 20%;
+    font-size: 20px;
+} */
+/* .homePage img {
+    width: 30vw;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%; 
+} */
+/* .externalFontText {
+    font-size: 18px;
+    color: #333; 
+    line-height: 1.5; 
+    margin-top: 20px;
+    font-family: 'Manuscript', sans-serif;
+} */
+/* ///////////////////////////// */
+
+/* קבוצת סגנונות עבור כתב מימין לשמאל */
+.rtl {
+    direction: rtl;
+    text-align: right; /* להתאים את הטקסט לימין */
+    margin-left: unset; /* להסיר את הריווח בצד שמאל */
+}
+
+/* קבוצת סגנונות עבור כתב משמאל לימין */
+.ltr {
+    direction: ltr;
+    text-align: left; /* להתאים את הטקסט לשמאל */
+    margin-right: unset; /* להסיר את הריווח בצד ימין */
+}
+
+.homePage h1 {
+    color: white;
+    font-family: 'AshuriteFont', sans-serif;
+    font-size: 50px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.homePage h4 {
+    color: white;
+    font-size: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+.homePage img {
+    width: 30vw;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 20px; /* כדי להרחיק את התמונה מהטקסט מקודם */
+    display: block; /* כדי שהתמונה תהיה באמצע ותתאים למרחב */
+    margin-left: auto; /* הזזת התמונה לאמצע */
+    margin-right: auto; /* הזזת התמונה לאמצע */
+}
+
+
+.externalFontText {
+    font-size: 18px;
+    color: #333; 
+    line-height: 1.5; 
+    margin-top: 20px;
+    font-family: 'Manuscript', sans-serif;
+}

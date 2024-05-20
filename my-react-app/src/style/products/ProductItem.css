@@ -1,0 +1,66 @@
+.product-item {
+    display: inline-block;
+    background: #e9ebec;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    width: calc(100% - 40px); /* Default width for mobile */
+    text-align: center;
+    border: 2px solid #98c2da; /* עובי המסגרת, סגנון המסגרת, צבע המסגרת */
+
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.product-item h3 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.product-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.product-item img:hover {
+    transform: rotate(360deg);
+}
+
+.product-item p {
+    color: black;
+    font-size: 1rem;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: white;
+}
+
+.product-list .product-item {
+    flex: 1 1 calc(33.333% - 20px); /* Default width for larger screens */
+    margin: 10px; /* Margin between items */
+}
+
+@media (max-width: 768px) {
+    .product-list .product-item {
+        flex: 1 1 calc(50% - 20px); /* Width for tablet screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-list .product-item {
+        flex: 1 1 calc(100% - 20px); /* Width for mobile screens */
+    }
+}

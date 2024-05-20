@@ -1,0 +1,103 @@
+#contact {
+  padding: 50px 0; /* מרווח מלמעלה ומלמטה */
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  position: relative;
+  background: linear-gradient(to right, #98c2da, #6699cc); /* רקע בגוון התכלת */
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px; /* רוחב מקסימלי */
+  margin: 20px; /* מרווח סביב הטופס */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Manuscript', sans-serif;
+  text-align: right;
+  overflow: hidden; /* מסתיר חלקים של תוכן שמחליקים על הרקע */
+}
+
+.contact-form:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px); /* הרחבת הרקע */
+  height: calc(100% + 20px); /* הגבהת הרקע */
+  background: linear-gradient(to right, #98c2da, #6699cc); /* רקע בגוון התכלת */
+  border-radius: 20px; /* מעגליות בקצוות הרקע */
+  z-index: -1; /* הצפנה מאחורי התוכן */
+}
+
+
+.contact-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: right;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #edd898;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #98c2da;
+}
+
+@media (min-width: 769px) {
+  #contact {
+      justify-content: flex-end; /* בצד ימין למסכים גדולים */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+      margin: 0 20px; /* מרכז את הטופס במסכים קטנים */
+  }
+
+  .contact-form h1 {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+      padding: 10px;
+  }
+
+  .contact-form h1 {
+      font-size: 1.2rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+      padding: 8px;
+      font-size: 0.9rem;
+  }
+
+  .contact-form button {
+      padding: 8px;
+      font-size: 0.9rem;
+  }
+}

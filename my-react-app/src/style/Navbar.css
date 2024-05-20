@@ -1,0 +1,83 @@
+.navbar {
+    background: linear-gradient(to right, black, #98c2da); 
+  }
+  
+  .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+  }
+  
+  .navbar li {
+      display: inline-block;
+  }
+  
+  .navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+  }
+  
+  .navbar li:hover a {
+      color: #edd898;
+  }
+  
+  .navbar button {
+      background-color: #edd898;
+      width: 100px;
+      height: 40px;
+      border-radius: 50px;
+      border: none;
+      transition: all 0.3s ease; /* הוספת אנימציה על כל המאפיינים */
+  }
+  
+  .navbar button:hover {
+      transform: scale(1.1); /* גידול בגודל */
+      background-color: #cab474; /* שינוי צבע רקע בעת העברת העכבר */
+  }
+  
+  .navbar ul li a {
+      cursor: pointer;
+  }
+  
+  .navbar button {
+      cursor: pointer;
+  }
+  
+  .language-icon {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 14px 20px;
+  }
+  
+  .language-icon:hover .dropdown {
+    display: block;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px; /* adjust if necessary */
+    right: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .dropdown li {
+    padding: 12px 16px;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .dropdown li:hover {
+    background-color: #ddd;
+  }
+  

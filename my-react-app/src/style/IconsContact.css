@@ -1,0 +1,29 @@
+/* IconsContact.css */
+.icons-contact {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* מרחק גדול יותר בין האייקונים */
+    padding: 20px;
+    background-color: #333;
+  }
+  
+  .contact-icon {
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .contact-icon:hover {
+    transform: scale(1.2); /* הגדלה בעת מעבר עכבר */
+    color: #ff9900; /* צבע מעבר על כל אייקון */
+  }
+  
+  .phone-number {
+    margin-left: 10px;
+    font-size: 16px;
+    color: white;
+  }
+  

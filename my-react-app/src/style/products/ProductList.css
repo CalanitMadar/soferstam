@@ -1,0 +1,14 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+      background: white; 
+      padding: 50px 50px; /* מרווח מלמטה */
+  }
+  
+  .product-list .product-item {
+    flex: 0 1 10%; /* רוחב מקסימלי של כל פריט ברשימה */
+    margin: 10px; /* מרווח בין פריטים */
+  }
+  
+  
