@@ -4,6 +4,13 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const twilio = require('twilio');
 
+app.use(cors({
+    origin: process.env.REACT_APP_API_URL,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true
+}));
+
+
 const app = express();
 const port = process.env.PORT || 3001; // Port from .env or default to 3001
 
@@ -15,7 +22,6 @@ const businessWhatsappNumber = process.env.WHATSAPP_NUMBER; // מספר הווט
 const twilioWhatsappNumber = process.env.TWILIO_WHATSAPP_NUMBER; // מספר הווטסאפ הווירטואלי של Twilio
 
 app.use(bodyParser.json());
-app.use(cors());
 
 app.post('/send-message', async (req, res) => {
     const { name, phone, email, message } = req.body;
