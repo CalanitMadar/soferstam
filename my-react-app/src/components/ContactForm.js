@@ -4,6 +4,8 @@ import '../style/ContactForm.css';
 import translations from '../assets/translations.json';
 
 const ContactForm = ({ selectedLanguage }) => {
+    const apiUrl = process.env.REACT_APP_API_URL;
+
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -24,7 +26,7 @@ const ContactForm = ({ selectedLanguage }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3001/send-message', formData);
+            await axios.post(`${apiUrl}/send-message`, formData);
             setFormData({ name: '', phone: '', email: '', message: '' });
             setStatusMessage(translations[selectedLanguage].submit_good);
         } catch (error) {
@@ -44,7 +46,6 @@ const ContactForm = ({ selectedLanguage }) => {
                     onChange={handleChange}
                     required
                 />
-
                 <input
                     type="text"
                     name="phone"
