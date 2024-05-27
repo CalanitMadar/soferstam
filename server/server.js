@@ -27,6 +27,11 @@ const twilioWhatsappNumber = process.env.TWILIO_WHATSAPP_NUMBER; // מספר ה�
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+
 app.post('/send-message', async (req, res) => {
     const { name, phone, email, message } = req.body;
 
