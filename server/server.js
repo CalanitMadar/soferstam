@@ -9,13 +9,16 @@ const twilio = require('twilio');
 const app = express();
 
 
-app.use(cors({
-    origin: process.env.REACT_APP_API_URL,
+
+
+const corsOptions = {
+    origin: 'https://soferstam-client.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true
-}));
-
-
+  };
+  
+  app.use(cors(corsOptions));
+  
 const port = process.env.PORT || 3001; // Port from .env or default to 3001
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID; // Twilio Account SID
