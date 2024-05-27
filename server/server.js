@@ -6,16 +6,15 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const twilio = require('twilio');
 
-
-
-
 const app = express();
+
 
 app.use(cors({
     origin: process.env.REACT_APP_API_URL,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true
 }));
+
 
 const port = process.env.PORT || 3001; // Port from .env or default to 3001
 
