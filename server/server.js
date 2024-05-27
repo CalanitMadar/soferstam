@@ -12,7 +12,7 @@ const app = express();
 
 
 const corsOptions = {
-    origin: 'https://soferstam-client.vercel.app',
+    origin: process.env.REACT_APP_API_URL,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true
   };
