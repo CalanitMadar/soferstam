@@ -29,7 +29,21 @@ const businessWhatsappNumber = process.env.WHATSAPP_NUMBER; // מספר הווט
 const twilioWhatsappNumber = process.env.TWILIO_WHATSAPP_NUMBER; // מספר הווטסאפ הווירטואלי של Twilio
 
 app.use(bodyParser.json());
+//////////////////////////////////////////////////
+const path = require('path');
 
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+app.get('/googleac832cca3b132dfb.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'googleac832cca3b132dfb.html'));
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+
+
+///////////////////////////////////////////////////
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
