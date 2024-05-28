@@ -19,7 +19,7 @@ function App() {
       <Navbar selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
       <HomePage selectedLanguage={selectedLanguage} />
       <ProductsList selectedLanguage={selectedLanguage} />
-      <ContactForm selectedLanguage={selectedLanguage} />
+      {/* <ContactForm selectedLanguage={selectedLanguage} /> */}
       <IconsContact selectedLanguage={selectedLanguage} />
     </div>
   );
